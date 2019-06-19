@@ -1,10 +1,18 @@
 //Back end logic
 function Vacations() {
-  this.places = []
+  this.places = [],
+  this.currentId = 0
 }
 
 Vacations.prototype.addDestination = function(place) {
+  place.id = this.assignId();
   this.places.push(place);
+
+}
+
+Vacations.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
 
 function Place(location, landmarks, timeOfYear, notes) {
@@ -13,9 +21,6 @@ function Place(location, landmarks, timeOfYear, notes) {
   this.timeOfYear = timeOfYear,
   this.notes = notes
 }
-
-
-
 
 
 
