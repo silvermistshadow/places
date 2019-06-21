@@ -22,6 +22,7 @@ function Place(location, landmarks, timeOfYear, notes) {
   this.notes = notes
 }
 
+var europe = new Place("Europe", "Tower of London, Eiffel Tower, Disneyland Paris", "Fall", "Sleep schedule was a mess, so I want to go again sometime and see more stuff");
 
 
 
